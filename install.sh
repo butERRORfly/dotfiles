@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 
 export XG_CONFIG_HOME="$HOME"/.config
 mkdir -p "$XDG_CONFIG_HOME"
@@ -10,7 +10,7 @@ ln -sf "$PWD/.tmux.conf" "$HOME"/.tmux.conf
 
 packages=(
   fd
-  ripgrep 
+  ripgrep
   npm
   starship
   lazygit
