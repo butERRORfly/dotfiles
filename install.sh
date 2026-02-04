@@ -15,8 +15,6 @@ packages=(
   starship
   lazygit
   kubectl
-  derailed/k9s/k9s
-  brew install fluxcd/tap/flux
 )
 
 for package in "${packages[@]}"; do
