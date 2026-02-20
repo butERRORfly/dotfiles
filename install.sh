@@ -1,25 +1,12 @@
 #!/bin/bash
 
-export XDG_CONFIG_HOME="$HOME"/.config
-mkdir -p "$XDG_CONFIG_HOME"
+# Setup neovim.
+mkdir -p ~/.config/nvim
+ln -sf "$PWD/.config/nvim" ~/.config/nvim
 
-ln -sf "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
+# Setup tmux.
+mkdir -p ~/.config/tmux
+ln -sf "$PWD/.config/tmux" ~/.config/tmux
 
-ln -sf "$PWD/.zshrc" "$HOME"/.zshrc
-ln -sf "$PWD/.tmux.conf" "$HOME"/.tmux.conf
-
-packages=(
-  fd
-  ripgrep
-  npm
-  starship
-  lazygit
-  kubectl
-)
-
-for package in "${packages[@]}"; do
-  echo "Installing $package..."
-  /home/linuxbrew/.linuxbrew/bin/brew install "$package"
-done
-
-echo "All packages from the setup script have been installed."
+# Success.
+echo "Dotfiles successfully installed."
