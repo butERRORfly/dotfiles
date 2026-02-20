@@ -1,14 +1,9 @@
 #!/bin/bash
 
-DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export XDG_CONFIG_HOME="$HOME"/.config
+mkdir -p "$XDG_CONFIG_HOME"
 
-# setup neovim.
-mkdir -p ~/.config/nvim
-ln -sf "$DOTFILES_DIR/.config/nvim" ~/.config/nvim
+ln -sf "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
+ln -sf "$PWD/.tmux.conf" "$HOME"/.tmux.conf
 
-# setup tmux.
-mkdir -p ~/.config/tmux
-ln -sf "$DOTFILES_DIR/.config/tmux" ~/.config/tmux
-
-# success.
 echo "Dotfiles successfully installed."
