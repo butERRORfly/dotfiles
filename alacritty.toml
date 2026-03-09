@@ -74,5 +74,7 @@ bindings = [
     # Switch to the down pane
     { key = "Down", mods = "Option|Shift", chars = "\u0002\u001b\u005b\u0042" },
     # Rename the current tmux window
-    { key = "R", mods = "Command|Shift", chars = "\u0002," }
+    { key = "R", mods = "Command|Shift", chars = "\u0002," },
+    # Close tmux window (Command+Shift+W)
+    { key = "W", mods = "Command|Shift", chars = "\u0002\u0026" },
 ]
