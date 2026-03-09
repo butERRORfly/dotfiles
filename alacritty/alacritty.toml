@@ -1,0 +1,78 @@
+[env]
+TERM = "xterm-256color"
+
+[window]
+padding.x = 10
+padding.y = 10
+decorations = "Buttonless"
+startup_mode = "Maximized"
+opacity = 0.8
+blur = true
+
+[font]
+size = 20.0
+
+[font.normal]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Regular"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Bold"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Italic"
+
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/gruvbox_dark.toml"
+]
+
+[keyboard]
+bindings = [
+    # Split tmux window vertically
+    { key = "H", mods = "Option|Shift", chars = "\u0002\"" },
+    # Split tmux window horizontally
+    { key = "V", mods = "Option|Shift", chars = "\u0002%" },
+    # Open t - tmux smart session manager
+    { key = "J", mods = "Option|Shift", chars = "\u0002\u0054" },
+    # Open interactive tmux session client
+    { key = "K", mods = "Option|Shift", chars = "\u0002s" },
+    # Switch to the last tmux session
+    { key = "L", mods = "Option|Shift", chars = "\u0002L" },
+    # Create a new tmux window
+    { key = "T", mods = "Option|Shift", chars = "\u0002c" },
+    # Kill the current pane
+    { key = "W", mods = "Option|Shift", chars = "\u0002x" },
+    # Toggle zoom state of the current tmux pane
+    { key = "Z", mods = "Option|Shift", chars = "\u0002z" },
+    # Select tmux window 1
+    { key = "Key1", mods = "Command", chars = "\u00021" },
+    # Select tmux window 2
+    { key = "Key2", mods = "Command", chars = "\u00022" },
+    # Select tmux window 3
+    { key = "Key3", mods = "Command", chars = "\u00023" },
+    # Select tmux window 4
+    { key = "Key4", mods = "Command", chars = "\u00024" },
+    # Select tmux window 5
+    { key = "Key5", mods = "Command", chars = "\u00025" },
+    # Select tmux window 6
+    { key = "Key6", mods = "Command", chars = "\u00026" },
+    # Select tmux window 7
+    { key = "Key7", mods = "Command", chars = "\u00027" },
+    # Select tmux window 8
+    { key = "Key8", mods = "Command", chars = "\u00028" },
+    # Select tmux window 9
+    { key = "Key9", mods = "Command", chars = "\u00029" },
+    # Switch to the left pane
+    { key = "Left", mods = "Option|Shift", chars = "\u0002\u001b\u005b\u0044" },
+    # Switch to the right pane
+    { key = "Right", mods = "Option|Shift", chars = "\u0002\u001b\u005b\u0043" },
+    # Switch to the up pane
+    { key = "Up", mods = "Option|Shift", chars = "\u0002\u001b\u005b\u0041" },
+    # Switch to the down pane
+    { key = "Down", mods = "Option|Shift", chars = "\u0002\u001b\u005b\u0042" },
+    # Rename the current tmux window
+    { key = "R", mods = "Command|Shift", chars = "\u0002," }
+]
